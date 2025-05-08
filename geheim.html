@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Das Geheimnis des Alten Pfades</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+        
+        body {
+            font-family: 'MedievalSharp', cursive;
+            background-color: #0a0a0a;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(94, 38, 13, 0.15) 0%, transparent 25%),
+                radial-gradient(circle at 80% 70%, rgba(13, 94, 68, 0.15) 0%, transparent 25%),
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path fill="%235a3c20" opacity="0.1" d="M30,50 Q50,30 70,50 T90,50 T70,70 T50,90 T30,70 T10,50 T30,30 Z"/></svg>');
+            color: #e0c080;
+            overflow: hidden;
+        }
+
+        .title {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            text-shadow: 0 0 10px rgba(218, 165, 32, 0.7);
+            letter-spacing: 3px;
+        }
+
+        .mystic-button {
+            padding: 18px 36px;
+            font-size: 1.5rem;
+            background: linear-gradient(135deg, #3a1c1c 0%, #1a2a3a 100%);
+            color: #f0d090;
+            border: 3px solid #5a3c20;
+            border-radius: 12px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.4s;
+            box-shadow: 0 0 20px rgba(218, 165, 32, 0.5);
+            position: relative;
+            overflow: hidden;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            z-index: 1;
+            margin-bottom: 3rem;
+        }
+
+        .mystic-button:hover {
+            box-shadow: 0 0 30px rgba(218, 165, 32, 0.8);
+            transform: translateY(-3px);
+            color: #ffebc0;
+        }
+
+        .mystic-button::before, .mystic-button::after {
+            content: "❖";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0.7;
+        }
+
+        .mystic-button::before {
+            left: 15px;
+        }
+
+        .mystic-button::after {
+            right: 15px;
+        }
+
+        .scroll {
+            position: absolute;
+            bottom: 20px;
+            width: 200px;
+            opacity: 0.6;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .rune {
+            position: absolute;
+            font-size: 2rem;
+            opacity: 0.3;
+            animation: pulse 8s infinite;
+        }
+
+        .rune:nth-child(1) { top: 15%; left: 10%; }
+        .rune:nth-child(2) { top: 25%; right: 15%; }
+        .rune:nth-child(3) { bottom: 20%; left: 20%; }
+        .rune:nth-child(4) { bottom: 30%; right: 10%; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.2; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.1); }
+        }
+
+        .ancient-text {
+            max-width: 600px;
+            text-align: center;
+            margin: 2rem auto;
+            line-height: 1.6;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="rune">ᚠ</div>
+    <div class="rune">ᚢ</div>
+    <div class="rune">ᚦ</div>
+    <div class="rune">ᚨ</div>
+
+    <h1 class="title">Das Tor der Alten Wege</h1>
+    
+    <p class="ancient-text">
+        "Wer das Verborgene sucht, muss zuerst den Mut finden, 
+        den Pfad zu betreten, den nur die Auserwählten sehen."
+    </p>
+    
+    <a href="https://maps.app.goo.gl/pGL7xVmraueugYxa8" class="mystic-button" target="_blank">
+        Das Tor öffnen
+    </a>
+
+    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20'><path fill='%235a3c20' d='M0,10 Q25,15 50,10 T100,10 L100,20 L0,20 Z'/></svg>" 
+         class="scroll" alt="Decorative scroll">
+</body>
+</html>
